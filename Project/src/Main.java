@@ -4,11 +4,11 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String wordnew;
         int count = 1, no_of_guesses = 5;
-
+        String[] words = {"ivory", "hall", "sail", "rice", "family", "licence", "triangle", "account", "miracle", "dollar", "work", "hour", "merit", "neglect", "cylinder"}; // Array of all words
+        String[] hints = {"Used to make ornaments and other articles.", "A building or large room", "An extent of fabric (such as canvas)", "Name of food", "Everyone "};
         System.out.println("\t\tWELCOME TO HANGMAN \nAre you ready? (y/n)");
         char ready = sc.next().charAt(0);
         if (ready == 'y' || ready == 'Y') {
-            String[] words = {"ivory", "hall", "sail", "rice", "family", "licence", "triangle", "account", "miracle", "dollar", "work", "hour", "merit", "neglect", "cylinder"}; // Array of all words
             int num = (int) (Math.random() * words.length);
             String word = words[num];
             wordnew = word; // Select random word from array "words"
@@ -54,5 +54,5 @@ public class Main {
         else {
             System.exit(0); //Exit if user says no
         }
-    }
-}
+    } //main()
+}//Class
